@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+
+<body>
+    <figure class="figure">
+      <img src="data:image/png;base64, {{result.get("image")}}" class="figure-img img-thumbnail input-image">
+    </figure>
+  <p color="red"><b><u>Prediction: {{result.get("class")}}</u></b></p>
+  <p><b>
+      0 - No DR<br><br>
+
+      1 - Mild<br><br>
+      
+      2 - Moderate<br><br>
+      
+      3 - Severe<br><br>
+      
+      4 - Proliferative DR<br><br>
+  </b>
+    </p> 
+  <div>
+    <a href="javascript:history.back()">Try with another image</a>
+  </div> 
+</body>
+
+</html>
+
+{% endblock %}
